@@ -35,7 +35,24 @@
    stringFunctions::str_word_countF($text);
    $text = "<hr><br>";
    stringFunctions::printThis($text);
+   
+   $text = "<h1>THIS IS STRLEN FUNCTION</h1><br>";
+   stringFunctions::printThis($text);
+   stringFunctions::strlenF($text);
+   $text = "<hr><br>";
+   stringFunctions::printThis($text);
+   
+   $text = "<h1>THIS IS STRREV FUNCTION</h1><br>";
+   stringFunctions::printThis($text);
+   stringFunctions::strrevF($text);
+   $text = "<hr><br>";
+   stringFunctions::printThis($text);
 
+   $text = "<h1>THIS IS ORD FUNCTION</h1><br>";
+   stringFunctions::printThis($text);
+   stringFunctions::ordF($text);
+   $text = "<hr><br>";
+   stringFunctions::printThis($text);
 }
 
   public function __destruct() {
@@ -70,6 +87,23 @@
      print($text);
      echo "<br>";
      print(str_word_count($text));
+     }
+     static public function strlenF($text) {
+     $text = "finding the length of this line<br>";
+     print($text);
+     print(strlen($text));
+     }
+     static public function strrevF($text) {
+     $text = "reverse this line";
+     print($text);
+     echo "<br>";
+     print(strrev($text));
+     }
+     static public function ordF($text) {
+     $text = "b";
+     print($text);
+     echo "<br>";
+     print(ord($text));
      }
   }
 
