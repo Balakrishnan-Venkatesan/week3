@@ -65,6 +65,25 @@
    stringFunctions::str_repeatF($text);
    $text = "<hr><br>";
    stringFunctions::printThis($text);
+
+    $text = "<h1>ARRAY PRINT FUNCTION</h1><br>";
+    stringFunctions::printThis($text);
+    $myArray = array(1,2,3);
+    arrayFunctions::printArray($myArray);
+    $text = "<hr><br>";
+    stringFunctions::printThis($text);
+
+    $text = "<h1>ARRAY SUM FUNCTION</h1><br>";
+    stringFunctions::printThis($text);
+    arrayFunctions::sumArray($myArray);
+    $text = "<hr><br>";
+    stringFunctions::printThis($text);
+
+    $text = "<h1>ARRAY KEY FUNCTION</h1><br>";
+    stringFunctions::printThis($text);
+    arrayFunctions::keyArray($myArray);
+    $text = "<hr><br>";
+    stringFunctions::printThis($text);
 }
 
   public function __destruct() {
@@ -75,15 +94,15 @@
 
 
   class stringFunctions {
-    static public function printThis($text) {
+     static public function printThis($text) {
      print($text);
      }
-    static public function strtolowerF($text) {
+     static public function strtolowerF($text) {
      $text = "THIS LINE WAS IN UPPER<br>";
      print($text);
      print(strtolower($text));
      }
-    static public function strtoupperF($text) {
+     static public function strtoupperF($text) {
      $text = "this line is in lower<br>";
      print($text);
      print(strtoupper($text));
@@ -129,7 +148,20 @@
      echo "<br>";
      print(str_repeat($text,3));
      }
-
-  }
-
+   }
+   
+   class arrayFunctions {
+     static public function printArray($myArray) {
+     print_r ($myArray);
+     }
+     static public function sumArray($myArray) {
+     print_r ($myArray);
+     echo "<br>";
+     print_r (array_sum($myArray));
+     }
+     static public function keyArray($myArray) {
+     print_r ($myArray);
+     echo "<br>";
+     print_r (array_keys($myArray));
+     }
 ?>  
