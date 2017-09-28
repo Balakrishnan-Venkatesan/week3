@@ -110,6 +110,24 @@
     arrayFunctions::acvArray($myArray2);
     $text = "<hr><br>";
     stringFunctions::printThis($text);
+
+     $text = "<h1>ARSORT FUNCTION</h1><br>";
+     stringFunctions::printThis($text);
+     arrayFunctions::arsortArray($myArray1);
+     $text = "<hr><br>";
+     stringFunctions::printThis($text);
+	
+     $text = "<h1>KRSORT FUNCTION</h1><br>";
+     stringFunctions::printThis($text);
+     arrayFunctions::krsortArray($myArray1);
+     $text = "<hr><br>";
+     stringFunctions::printThis($text);
+
+     $text = "<h1>ARRAY FLIP FUNCTION</h1><br>";
+     stringFunctions::printThis($text);
+     arrayFunctions::flipArray($myArray1);
+     $text = "<hr><br>";
+     stringFunctions::printThis($text);
 }
 
   public function __destruct() {
@@ -209,11 +227,26 @@
      echo "<br>";
      print_r ($myArray);
      }
-     static public function
-     acvArray($myArray2) {
+     static public function acvArray($myArray2) {
      print_r ($myArray2);
      echo "<br>";
      print_r (array_count_values($myArray2));
      }
-     
-?> 
+     static public function arsortArray($myArray1) {
+     print_r ($myArray1);
+     echo"<br>";
+     arsort($myArray1);
+     print_r ($myArray1);
+     }
+     static public function krsortArray($myArray1) {
+     print_r ($myArray1);
+     echo"<br>";
+     krsort($myArray1);
+     print_r ($myArray1);
+     }
+     static public function flipArray($myArray1) {
+     print_r ($myArray1);
+     echo "<br>";
+     print_r (array_flip($myArray1));
+  }    
+?>> 
