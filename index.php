@@ -84,6 +84,32 @@
     arrayFunctions::keyArray($myArray);
     $text = "<hr><br>";
     stringFunctions::printThis($text);
+
+    $text = "<h1>ARRAY REVERSE FUNCTION</h1><br>";
+    stringFunctions::printThis($text);
+    arrayFunctions::reverseArray($myArray);
+    $text = "<hr><br>";
+    stringFunctions::printThis($text);
+
+    $text = "<h1>ARRAY MERGE FUNCTION</h1><br>";
+    stringFunctions::printThis($text);
+    $myArray1 = array(6,8,7);
+    arrayFunctions::mergeArray($myArray, $myArray1);
+    $text = "<hr><br>";
+    stringFunctions::printThis($text);
+
+    $text = "<h1>ARRAY POP FUNCTION</h1><br>";
+    stringFunctions::printThis($text);
+    arrayFunctions::popArray($myArray);
+    $text = "<hr><br>";
+    stringFunctions::printThis($text);	
+    
+    $text = "<h1>ARRAY COUNT VALUES FUNCTION</h1><br>";
+    stringFunctions::printThis($text);
+    $myArray2 = array(1,1,2,1,3,3);
+    arrayFunctions::acvArray($myArray2);
+    $text = "<hr><br>";
+    stringFunctions::printThis($text);
 }
 
   public function __destruct() {
@@ -164,4 +190,30 @@
      echo "<br>";
      print_r (array_keys($myArray));
      }
-?>  
+     static public function reverseArray($myArray) {
+     print_r ($myArray);
+     echo "<br>";
+     print_r (array_reverse($myArray));
+     }
+     static public function mergeArray($myArray, $myArray1) {
+     print_r ($myArray);
+     echo "<br>";
+     print_r ($myArray1);
+     echo "<br>";
+     print_r (array_merge($myArray, $myArray1));
+     }
+     static public function popArray($myArray) {
+     print_r ($myArray);
+     echo "<br>";
+     print_r (array_pop($myArray));
+     echo "<br>";
+     print_r ($myArray);
+     }
+     static public function
+     acvArray($myArray2) {
+     print_r ($myArray2);
+     echo "<br>";
+     print_r (array_count_values($myArray2));
+     }
+     
+?> 
