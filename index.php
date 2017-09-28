@@ -120,6 +120,7 @@
      $text = "<h1>KRSORT FUNCTION</h1><br>";
      stringFunctions::printThis($text);
      arrayFunctions::krsortArray($myArray1);
+     arrayFunctions::flipArray($myArray1);
      $text = "<hr><br>";
      stringFunctions::printThis($text);
 
@@ -248,5 +249,6 @@
      print_r ($myArray1);
      echo "<br>";
      print_r (array_flip($myArray1));
+  
   }    
-?>> 
+?> 
