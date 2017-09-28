@@ -53,6 +53,18 @@
    stringFunctions::ordF($text);
    $text = "<hr><br>";
    stringFunctions::printThis($text);
+
+   $text = "<h1>THIS IS STRSHUFFLE FUNCTION</h1><br>";
+   stringFunctions::printThis($text);
+   stringFunctions::str_shuffleF($text);
+   $text = "<hr><br>";
+   stringFunctions::printThis($text);
+   
+   $text = "<h1>THIS IS STRREPEAT FUNCTION</h1><br>";
+   stringFunctions::printThis($text);
+   stringFunctions::str_repeatF($text);
+   $text = "<hr><br>";
+   stringFunctions::printThis($text);
 }
 
   public function __destruct() {
@@ -105,6 +117,19 @@
      echo "<br>";
      print(ord($text));
      }
+     static public function str_shuffleF($text) {
+     $text = "shuffling this";
+     print($text);
+     echo "<br>";
+     print(str_shuffle($text));				    
+     }
+     static public function str_repeatF($text) {
+     $text = "repeat this";
+     print($text);
+     echo "<br>";
+     print(str_repeat($text,3));
+     }
+
   }
 
 ?>  
